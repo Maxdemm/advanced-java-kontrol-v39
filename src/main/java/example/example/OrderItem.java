@@ -1,4 +1,4 @@
-package org.example;
+package example.example;
 
 public class OrderItem {
     private final String productName;

@@ -1,4 +1,4 @@
-package org.example.exception;
+package example.example.exception;
 
 public class ValidationException extends AppException {
 

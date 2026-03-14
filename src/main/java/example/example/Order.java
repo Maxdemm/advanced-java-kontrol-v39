@@ -1,18 +1,22 @@
-package org.example;
-
+package example.example;
 
 public class Order {
     private final String id;
     private final Email customerEmail;
     private final OrderItem[] items;
+    private final PaymentMethod paymentMethod;
+    private final boolean vip;
     private OrderStatus status;
-    private PaymentMethod paymentMethod;
+    private boolean shipmentConfirmed;
 
-    public Order(String id, Email customerEmail, OrderItem[] items) {
+    public Order(String id, Email customerEmail, OrderItem[] items, PaymentMethod paymentMethod, boolean vip) {
         this.id = id;
         this.customerEmail = customerEmail;
         this.items = items.clone();
+        this.paymentMethod = paymentMethod;
+        this.vip = vip;
         this.status = OrderStatus.NEW;
+        this.shipmentConfirmed = false;
     }
 
     public String getId() {
@@ -31,6 +35,10 @@ public class Order {
         return status;
     }
 
+    public boolean isVip() {
+        return vip;
+    }
+
     public PaymentMethod getPaymentMethod() {
         return paymentMethod;
     }
@@ -39,7 +47,11 @@ public class Order {
         this.status = status;
     }
 
-    public void setPaymentMethod(PaymentMethod paymentMethod) {
-        this.paymentMethod = paymentMethod;
+    public boolean isShipmentConfirmed() {
+        return shipmentConfirmed;
+    }
+
+    public void confirmShipment() {
+        this.shipmentConfirmed = true;
     }
 }

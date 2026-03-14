@@ -1,6 +1,6 @@
-package org.example;
+package example.example;
 
-import org.example.exception.PaymentException;
+import example.example.exception.PaymentException;
 
 public class PayPalPayment implements PaymentMethod {
 

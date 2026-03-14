@@ -1,4 +1,4 @@
-package org.example;
+package example.example;
 
 public enum OrderStatus {
     NEW,
