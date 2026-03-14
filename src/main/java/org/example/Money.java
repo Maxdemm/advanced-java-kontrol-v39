@@ -3,17 +3,17 @@ package org.example;
 import java.util.Objects;
 
 public class Money {
-    private long amount;
+    private int amount;
 
-    public Money(long amount) {
+    public Money(int amount) {
         this.amount = amount;
     }
 
-    public long getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(long amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
