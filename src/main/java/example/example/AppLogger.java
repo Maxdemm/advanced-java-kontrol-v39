@@ -1,0 +1,20 @@
+package example.example;
+
+public class AppLogger {
+
+    public void info(String message) {
+        System.out.println("INFO: " + message);
+    }
+
+    public void warn(String message) {
+        System.out.println("WARN: " + message);
+    }
+
+    public void error(String message) {
+        System.out.println("ERROR: " + message);
+    }
+
+    public void error(String message, Throwable cause) {
+        System.out.println("ERROR: " + message + " Cause: " + cause.getMessage());
+    }
+}
